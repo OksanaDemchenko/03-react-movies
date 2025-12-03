@@ -9,9 +9,9 @@ interface MovieModalProps {
 }
 
 export default function MovieModal({ movie, onClose }: MovieModalProps) {
-  // useEffect завжди викликається
+  
   useEffect(() => {
-    if (!movie) return; // нічого не робимо, якщо movie нема
+    if (!movie) return; 
 
     document.body.style.overflow = "hidden";
 
@@ -27,10 +27,8 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
     };
   }, [movie, onClose]);
 
-  // Якщо фільму нема — не рендеримо модалку
   if (!movie) return null;
 
-  // Клік по фону — закриття
   function handleBackdrop(e: React.MouseEvent<HTMLDivElement>) {
     if (e.target === e.currentTarget) onClose();
   }

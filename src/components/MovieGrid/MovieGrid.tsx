@@ -8,7 +8,7 @@ interface MovieGridProps {
 
 export default function MovieGrid({ movies, onSelect }: MovieGridProps) {
   if (movies.length === 0) {
-    return null; // не рендеримо галерею, якщо немає фільмів
+    return null; 
   }
 
   return (
